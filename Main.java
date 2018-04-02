@@ -37,17 +37,18 @@ public class Main {
                         }
                     System.out.println("已將資料全數輸入完畢");
                     break;
-//                case 2:
-//                    System.out.println("請問要搜索哪隻呢?" + "\n" + "請輸入角色名字或是屬性");
-//                    String scn = src.next();
-//                    for (int i = 0; i < 5; i++) {
-//                        if (tos[i].getName().equals(scn)) {
-//                            tos[i].showAll();
-//                        }else {
-//                            System.out.println("查無資料");
-//                        }
-//                    }
-//                    break;
+                case 2:
+                    System.out.println("請問要搜索哪隻呢?" + "\n" + "請輸入角色名字或是屬性");
+                   name = src.next();
+                    for (int i = 0; i <tos.size(); i++) {
+                        Tos tos1 = tos.get(i);
+                        if (tos1.getName().equals(name)||tos1.getCategory().equals(name)) {
+                            tos1.showAll();
+                        }else {
+                            System.out.println("查無資料");
+                        }
+                    }
+                    break;
                  case 3:
                      System.out.println("請輸入欲修改之角色");
                      name=src.next();
